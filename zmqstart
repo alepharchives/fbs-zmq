@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $Id: $
+#
+# Module:  start -- description
+# Created: 14-APR-2011 18:53
+# Author:  tmr
+#
+
+TMP=`pwd` ; cd `dirname $0` ; MYDIR=`pwd` ; cd ${TMP}
+ZMQBROKER=${MYDIR}/tmp/fbs_zmq_broker
+
+ZMQWRK_BIND="ipc:///tmp/fbs_zmq_worker.sock"
+ZMQCLI_BIND="tcp://*:5555"
+
+nohup ${ZMQBROKER} ${ZMQWRK_BIND} ${ZMQCLI_BIND} &
+
+# vim: fdm=syntax:fdn=3:tw=74:ts=2:syn=sh

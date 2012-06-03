@@ -1,0 +1,5 @@
+@@SHRLIB@@
+SrvConnect: void SrvConnect(I:xc_char_t *,IO:xc_int_t *,IO:xc_int_t *)
+SrvDisconnect: void SrvDisconnect()
+SrvGetMsg: void SrvGetMsg(IO:xc_string_t *,I:xc_int_t,IO:xc_int_t *)
+SrvReply: void SrvReply(IO:xc_string_t *,IO:xc_int_t *)
